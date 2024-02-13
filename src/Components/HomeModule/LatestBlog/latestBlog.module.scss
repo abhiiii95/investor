@@ -1,0 +1,51 @@
+.latestBlog{
+    padding: 75px 50px;
+    .latestBlogContainer{
+        border-radius: 40px;
+        background: #F3F4F6;
+        padding: 64px 46px;
+        .headingWrapper{
+            .uprHeading{
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 40px;
+                color: #111827;
+                text-align: center;
+            }
+            .downHeading{
+                font-size: 16px;
+                line-height: 24px;
+                color: #6B7280;
+                font-weight: 400;
+                margin-top: 14px;
+                text-align: center;
+            }
+        }
+        .midContainer{
+            margin-top: 48px;
+            position: relative;
+            button{
+                height: 48px;
+                width: 48px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #E5E7EB;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 9;
+            }
+            .nextBtn{
+             right: -24px;
+            }
+            .prevBtn{
+                    left: -24px;
+                transform: translateY(-50%) scale(-1);
+            }
+        }
+    }
+}

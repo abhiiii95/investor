@@ -1,0 +1,201 @@
+.footerWrapper{
+    background: #121418;
+    padding-top: 84px;
+    padding-bottom: 12px;
+    .footerContentWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-columns: 360px 287px 1fr;
+        // gap: 122px;
+        gap: 70px;
+        .leftContent{
+            margin-bottom: 77px;
+            .navLogo{
+                position: relative;
+                left: -62px;
+            }
+            .desc{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 26.7px;
+                color: #D6D6D6;
+            }
+            .followUs{
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 25px;
+                margin-top: 25px;
+                color:#fff;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 30px;
+                    height: 2px;
+                    border-radius: 10px;
+                    background: #E77900;
+                    left: 0;
+                    bottom: 0px;
+                }
+            }
+            .followLink{
+                display: flex;
+                gap: 15px;
+                margin-top: 22px;
+                li{
+                    height: 32px;
+                    width: 32px;
+                    background: #3b5998;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 4px;
+                     transition: all .3s;
+                    cursor: pointer;
+                    &:nth-child(2){
+                        background: #000;
+                    }
+                    &:nth-child(3){
+                        background: linear-gradient(135deg,#ff02ce,#ff252a 61%,#fec900);
+                    }
+                    &:nth-child(4){
+                        background: #ff0000;
+                    }
+                    img{
+                        transition: all .3s;
+                    }
+                    &:hover{
+                        transform: translateY(-5px);
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+        }
+        .midContent{
+           
+            .usefulLinks{
+                margin-top: 26px;
+                display: flex;
+                flex-wrap: wrap;
+                gap:16px;
+                li{
+                    width: 100%;
+                    max-width: 47%;
+                    // float: left;
+                    a{
+                        display: inline-block;
+                        width: 100%;
+                        display: flex;
+                        gap: 6px;
+                        
+                        span{
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 21.7px;
+                            color: #D6D6D6;
+                            transition: all .3s;
+                        }
+                        &:hover{
+                            span{
+                                color: #E77900;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .rightContent{
+           .emailWrapper{
+            display: flex;
+            align-items: center;
+            margin-top: 22px;
+            p{
+                margin-left: 8px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21.7px;
+                color: #E77900;
+            }
+            a{
+                display: flex;
+                margin-left: 12px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #fff;
+            }
+           }
+           .subscribeWrapper{
+            border-radius: 10px;
+            padding: 6px;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            margin-top: 20px;
+            input{
+                outline: none;
+                padding-right: 10px;
+                margin-left: 10px;
+                &::placeholder{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #6B7280;
+                    line-height: 25px;
+
+                }
+            }
+            button{
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    background: #E77900;
+                    border: 2px solid #E77900;
+                    color: #fff;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    font-size: 13px;
+                    line-height: 19px;
+                    letter-spacing: 1.56px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    transition: all .3s;
+                    &:hover{
+                        background: #a95800;
+                        border-color: #a95800;
+                    }
+            }
+
+
+           }
+        }
+    }
+    .copyRight{
+        border-top: 1px solid #424242;
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21.7px;
+            color: #D6D6D6;
+            padding-top: 15px;
+            text-align: center;
+        }
+    }
+}
+   .midHeading{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 21.7px;
+                color: #FFFFFF;
+                margin-top: 26px;
+                position: relative;
+             &::after{
+                position: absolute;
+                content: "";
+                height: 2px;
+                border-radius: 10px;
+                width: 30px;
+                background: #E77900;
+                bottom: -5px;
+                left: 0;
+             }   
+            }

@@ -1,0 +1,19 @@
+.headingH4{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.36px;
+    line-height: 111.2%;
+    color: #121418;
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        width: 174px;
+        height: 20px;
+        background: #FDE8E8;
+        bottom: -9px;
+        left: 0;
+        z-index: -1;
+    }
+}
