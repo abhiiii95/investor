@@ -38,13 +38,29 @@
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 9;
+                transition: all .3s;
+                &:hover{
+                    background: #e77900;
+                    border-color: #e77900;
+                    box-shadow: inset 0px 2px 4px #cd6b00;
+                }
+                svg path{
+                    transition: all .3s;
+                }
+                &:hover{
+                    svg path{
+                            fill: #fff;
+                }
+                }
             }
             .nextBtn{
              right: -24px;
+             
             }
             .prevBtn{
                     left: -24px;
                 transform: translateY(-50%) scale(-1);
+                
             }
         }
     }

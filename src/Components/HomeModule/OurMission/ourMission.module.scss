@@ -35,6 +35,37 @@
                 cursor: pointer;
                 margin-top: 45px;
                 text-transform: uppercase;
+                position: relative;
+                overflow: hidden;
+                transition: all .3s;
+                span{
+                transition: all .3s;
+                        position: relative;
+                        z-index: 2;
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    height: 0%;
+                    width: 100%;
+                        background: #e77900;
+                        color: #fff;
+                        // border:2px solid #e77900;
+                        top: 0;
+                        left: 0;
+                        box-shadow: inset 0px 2px 4px #cd6b00;
+                        transition: all .3s;
+                }
+                &:hover{
+                    border-color: #e77900;
+                    span{
+                        color: #fff;
+                    }
+                }
+                &:hover::before{
+                    height: 100%;
+                }
+                
             }
         }
         .rightContent{
@@ -43,7 +74,7 @@
             flex: 1;
             width: 100%;
             overflow: hidden;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             .rightContentHeading{
                 padding: 21px 20px 23px;
                 font-size: 18px;
@@ -62,6 +93,7 @@
                     padding: 20px;
                     gap: 16px;
                     border-bottom: 1px solid #E5E7EB;
+                    cursor: default;
                     &:last-child{
                         border-bottom: none;
                     }
@@ -73,6 +105,9 @@
                     min-height: 40px;
                     border-radius: 100%;
                     box-shadow: 0px 2px 4px 0px rgba(#000000, 0.05);
+                    img{
+                        border-radius: 50%;
+                    }
 
                 }
                 &__div{

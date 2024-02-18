@@ -12,6 +12,8 @@
                 align-items: center;
                 gap: 10px;
                 margin-right: 36px;
+                position: relative;
+                overflow: hidden;
                 p{
                     font-size: 14px;
                     font-weight: 600;
@@ -19,6 +21,25 @@
                     line-height: 21px;
                     color: #E77900;
                     text-transform: uppercase;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 6px;
+                    background-color: #fff;
+                    animation: whitebg 2s linear infinite;
+                    box-shadow: 0 0 6px 4px #fff;
+                    @keyframes whitebg {
+                        0% {
+                            transform: translateX(-20px);
+                        }
+                        100% {
+                            transform: translateX(300px);
+                        }
+                    }
                 }
             }
             .swiperWrapper{
@@ -47,6 +68,7 @@
                 display: flex;
                 gap: 20px;
                 .nextArrow{
+                    transition: all .3s;
                     svg{
 
                         -moz-transform: scaleX(-1);
@@ -56,6 +78,26 @@
                         -ms-filter: fliph; /*IE*/
                         filter: fliph; /*IE*/
                     }
+                    &:hover {
+                        transform: translateX(2px);
+                    }
+                }
+                button {
+                    
+                  
+                    svg path{
+                        transition: all .3s;
+                    }
+                    &:hover svg path{
+                        fill: #E77900;
+                    }
+                    
+                }
+                .prevArrow{
+                    transition: all .3s;
+                    &:hover {
+                    transform: translateX(-2px);
+                            }
                 }
 
 

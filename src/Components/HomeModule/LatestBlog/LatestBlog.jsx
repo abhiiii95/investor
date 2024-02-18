@@ -7,6 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./latestBlog.module.scss";
 import LatestBlogCard from "./LatestBlogCard/LatestBlogCard";
+import slide1 from "@/assets/images/slide1.png";
+import slide2 from "@/assets/images/slide2.png";
+import slide3 from "@/assets/images/slide3.png";
 
 const LatestBlog = () => {
     const sliderRef = useRef(null);
@@ -20,6 +23,80 @@ const LatestBlog = () => {
       if (!sliderRef.current) return;
       sliderRef.current.swiper.slideNext();
     };
+    const slideData = [
+      {
+        id: 1,
+        image: slide1,
+        alt: "slide1",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 2,
+        image: slide2,
+        alt: "slide2",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 3,
+        image: slide3,
+        alt: "slide3",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 4,
+        image: slide1,
+        alt: "slide1",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 5,
+        image: slide1,
+        alt: "slide1",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 6,
+        image: slide2,
+        alt: "slide2",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 7,
+        image: slide3,
+        alt: "slide3",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+      {
+        id: 8,
+        image: slide1,
+        alt: "slide1",
+        route: "/",
+        date: "May 20, 2021",
+        authorName: "Pillifant Vern",
+        heading: "How architects visualize design for worlds biggest airport",
+      },
+    ];
   return (
     <section className={styles?.latestBlog}>
       <div className={styles?.latestBlogContainer}>
@@ -38,11 +115,11 @@ const LatestBlog = () => {
               className="mySwiper"
               ref={sliderRef}
             >
-              {[1, 2, 3, 4, 5]?.map((val) => {
+              {slideData?.map((val) => {
                 return (
                   <>
-                    <SwiperSlide key={val?.id}>
-                      <LatestBlogCard />
+                    <SwiperSlide key={val?.id} >
+                      <LatestBlogCard {...val} />
                     </SwiperSlide>
                   </>
                 );

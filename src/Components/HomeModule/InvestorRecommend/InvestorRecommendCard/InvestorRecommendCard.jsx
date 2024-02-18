@@ -3,28 +3,38 @@ import styles from "./InvestorRecommendCard.module.scss";
 import Image from 'next/image';
 import nester from "@/assets/images/nester.png";
 import Link from 'next/link';
-const InvestorRecommendCard = () => {
+const InvestorRecommendCard = ({
+  id,
+  image,
+  alt,
+  route,
+  heading,
+  subHeading,
+  topic,
+      date,
+      writer
+}) => {
   return (
     <>
       <div className={styles?.InvestorRecommendCard}>
         <div className={styles?.investorImage}>
-          <Image src={nester} alt="nester" />
+          <Image src={image} alt={alt} />
         </div>
         <div className={styles?.investCardContent}>
-          <span className={styles?.investCardContent__span}>Technology</span>
-          <Link href={"/"} className={styles?.investCardContent__p}>
-            Most Popular Crypto Blogs
+          <span className={styles?.investCardContent__span}>{topic}</span>
+          <Link href={route} className={styles?.investCardContent__p}>
+            <span>{heading}</span>
           </Link>
           <div className={styles?.investCardContent__div}>
             <p>
-              By <span> Henery sanders</span>
+              By <span> {writer}</span>
             </p>
-            <p>27 Jan 2020</p>
+            <p>{date}</p>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default InvestorRecommendCard

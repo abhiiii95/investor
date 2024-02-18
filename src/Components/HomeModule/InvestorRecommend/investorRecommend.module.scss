@@ -14,6 +14,10 @@
                 color: #6C6F72;
                 text-transform: uppercase;
                 display: block;
+                transition: all 0.3s;
+                    &:hover {
+                    color: #e93314;
+                    }
             }
         }
     .investorContent{
@@ -54,7 +58,7 @@
                     box-shadow: 0px 4px 4px rgba(#000000, .25);
                     z-index: 1;
                     &__span{
-                        font-size: 10px;
+                        font-size: 12px;
                         line-height: 14px;
                         letter-spacing: 0.72px;
                         font-weight: 600;
@@ -65,6 +69,26 @@
                         border-radius: 11px;
                         padding: 2px 6px;
                         margin-bottom: 12px;
+                        position: relative;
+                        overflow: hidden;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            height: 0%;
+                            width: 100%;
+                            background: #e93314;
+                            left: 0;
+                            top: 0;
+                            transition: all 0.3s;
+                            }
+                            span{
+                                position: relative;
+                                z-index: 2;
+                            }
+                    }
+                    a{
+                        display: block;
+                        margin-bottom: 24px;
                     }
                     &__h2{
                         font-size: 35px;
@@ -72,7 +96,41 @@
                         letter-spacing: -1.05px;
                         font-weight: 600;
                         color: #121418;
-                        margin-bottom: 24px;
+                         padding: 0;
+              background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from(currentColor),
+                to(currentColor)
+              );
+              background-image: -webkit-linear-gradient(
+                left,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-image: -o-linear-gradient(
+                left,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-image: linear-gradient(
+                to right,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-position: 0 100%;
+              background-repeat: no-repeat;
+              background-size: 0 1px;
+              -webkit-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              box-sizing: border-box;
+              -webkit-transition: background-size 0.8s
+                cubic-bezier(0.25, 0.8, 0.25, 1);
+              -o-transition: background-size 0.8s
+                cubic-bezier(0.25, 0.8, 0.25, 1);
+              transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+                        
                     }
                     &__div{
                         display: flex;
@@ -89,6 +147,22 @@
                         }
                     }
 
+            }
+            &:hover{
+                .blog1{
+                    &__span{
+                        &::before{
+                            height: 100%;
+                        }
+                        span{
+                            color: #fff;
+                        }
+                    }
+                    &__h2{
+                           -webkit-background-size: 100% 1px !important;
+                            background-size: 100% 1px !important;
+                    }
+                }
             }
         }
         .rightContent{

@@ -16,8 +16,10 @@ const TopCryptoCard = ({
     <>
       <li className={`${styles?.ulWrapper__li} ${newClass}`}>
         <div className={styles?.liContent}>
-          <span>{date}</span>
-          <Link href={route}>{heading}</Link>
+          <span className={styles?.date}>{date}</span>
+          <Link href={route}>
+            <span>{heading}</span>
+          </Link>
         </div>
         <span className={styles?.imageWrapper}>
           <Image src={image} alt={alt} />

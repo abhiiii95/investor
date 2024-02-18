@@ -4,6 +4,20 @@
     overflow: hidden;
     position: relative;
     height: 380px;
+    &:hover{
+        .imageWrapper {
+            img{
+                transform: scale(1.25);
+            }
+        }
+        .blogSubHeading{
+            span{
+
+                -webkit-background-size: 100% 1px !important;
+                background-size: 100% 1px !important;
+            }
+        }
+    }
     .imageWrapper{
         overflow: hidden;
         width: 100%;
@@ -11,6 +25,7 @@
         img{
             height: 100%;
             width: 100%;
+            transition: all .3s;
         }
     }
     .latestBlogContent{
@@ -70,6 +85,44 @@
             -webkit-line-clamp: 2; /* number of lines to show */
                     line-clamp: 2; 
             -webkit-box-orient: vertical;
+            span{
+
+            
+            padding: 0;
+              background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from(currentColor),
+                to(currentColor)
+              );
+              background-image: -webkit-linear-gradient(
+                left,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-image: -o-linear-gradient(
+                left,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-image: linear-gradient(
+                to right,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-position: 0 100%;
+              background-repeat: no-repeat;
+              background-size: 0 1px;
+              -webkit-box-sizing: border-box;
+              -ms-box-sizing: border-box;
+              box-sizing: border-box;
+              -webkit-transition: background-size 0.8s
+                cubic-bezier(0.25, 0.8, 0.25, 1);
+              -o-transition: background-size 0.8s
+                cubic-bezier(0.25, 0.8, 0.25, 1);
+              transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+            }
         }
         .smallHeading{
             font-size: 12px;

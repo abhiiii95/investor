@@ -92,7 +92,7 @@ const Trending = () => {
                 </Swiper>
               </div>
               <div className={styles?.sliderButton}>
-                <button className="prev-arrow" onClick={handlePrev}>
+                <button className={styles?.prevArrow} onClick={handlePrev}>
                   <svg
                     width={17}
                     height={17}
